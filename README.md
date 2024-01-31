@@ -1,5 +1,5 @@
 # isOdd
-if statements suck, lookup tables are built different.
+if statements suck, lookup tables are built different💪.
 
 To check if a number 'i' is odd you check if the bit number i is a 1 or a 0
   `tab[i/32] & 1<<(i%32)`
