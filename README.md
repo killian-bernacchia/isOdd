@@ -1,11 +1,17 @@
 # isOdd
-if statements suck, lookup tables are built different💪.
+if statement sucks, lookup tables are built different💪.
 
-To check if a number 'i' is odd you check if the bit number i is a 1 or a 0
-  `tab[i/32] & 1<<(i%32)`
-But +-*/% are not funny, so let's use only bits operators.
-  `1 & ( tab[i>>5]>>(i&0x1F) )`
-Now we got more readability and efficienty 👍
+To make it storage efficient I only stored 1 bit (true/false) for each 32 bits intergers.
+
+So instead of an array of $2^{32}$ bytes, we got an array of $2^{32}$ bits.
+
+To check if 'N' is odd or even you have to check if the Nth bit of the array is odd :
+- `tab[N/32] & 1<<(N%32)`
+
+But `+-*/%` opperators ar boriiiing... Let's make it with bits operators only :
+- `1 & ( tab[i>>5]>>(i&0x1F) )`
+
+Now we got good readability and efficienty, the best of two world👍
 
 ## tab_part.h :
 ```c
