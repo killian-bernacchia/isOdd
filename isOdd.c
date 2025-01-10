@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "tab.h"
-
-int isOdd(uint32_t i) { return 1 & ( tab[i>>5]>>(i&0x1F) ); }
+#include "isOdd.h"
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
