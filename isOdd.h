@@ -1,10 +1,42 @@
-#ifndef ODD_ARRAY_H
-#define ODD_ARRAY_H
+#ifndef IS_ODD_H
+#define IS_ODD_H
 
-uint32_t odd_array[134217728] = {
-	#include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h", #include "array_part.h"
+#include <stdint.h>
+
+uint32_t __ODD_ARRAY[134217728] = {
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
+	, 
+	#include "array_part.h"
 };
 
-#define isOdd(N) (1 & ( tab[i>>5]>>(i&0x1F) ))
+#define IS_ODD(N) (1 & ( __ODD_ARRAY[(N)>>5]>>((N)&0x1F) ))
 
-#endif
+#endif // IS_ODD_H

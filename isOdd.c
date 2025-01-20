@@ -4,11 +4,11 @@
 #include "isOdd.h"
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
+    if (argc < 2 || argc > 2) {
         printf("Usage: %s <number>\n", argv[0]);
         return 1;
     }
     unsigned long num = strtoul(argv[1], NULL, 10);
-    printf("%u",isOdd(num));
+    printf("%u",IS_ODD(num));
     return 0;
 }
